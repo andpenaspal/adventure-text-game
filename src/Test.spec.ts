@@ -1,6 +1,4 @@
-import { describe, expect, test } from 'vitest';
-
-import { check } from './Test';
+import { check } from '~/Test';
 
 describe('asdfasdf', () => {
   test('asdf', () => {

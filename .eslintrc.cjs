@@ -40,7 +40,6 @@ module.exports = {
     'react-refresh/only-export-components': 'warn',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',
-    // Check this
     '@typescript-eslint/explicit-member-accessibility': [
       'error',
       {
@@ -128,9 +127,13 @@ module.exports = {
       {
         groups: [
           // Packages `react` related packages come first.
-          ['^react', '^@?\\w'],
-          // Internal packages.
-          ['^(@|components)(/.*|$)'],
+          ['^react'],
+          // Library Packages
+          ['^@?\\w'],
+          // Internal components.
+          ['^(~/components)(/.*|$)'],
+          // Other Internal imports.
+          ['^~'],
           // Side effect imports.
           ['^\\u0000'],
           // Parent imports. Put `..` last.

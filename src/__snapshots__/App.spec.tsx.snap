@@ -2,11 +2,12 @@
 
 exports[`asfd > asdffads 1`] = `
 .emotion-0 {
-  border: 1px solid red;
+  border: 1px solid #1976d2;
+  color: #1976d2;
 }
 
 .emotion-0:hover {
-  border-color: green;
+  border-color: #9c27b0;
 }
 
 <div>
