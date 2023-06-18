@@ -11,5 +11,7 @@ type Option = 'light' | 'main' | 'dark' | 'contrastText';
  * @param option Desired options for the color. Defaults to 'main'.
  * @returns Color specified.
  */
-export const getColor = (theme: Theme, color: PaletteColorOptions, option: Option = 'main') =>
+const getColor = (theme: Theme, color: PaletteColorOptions, option: Option = 'main') =>
   theme.palette[color][option];
+
+export default getColor;

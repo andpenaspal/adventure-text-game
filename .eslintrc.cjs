@@ -2,6 +2,9 @@ module.exports = {
   env: { browser: true, es2020: true },
   extends: [
     'eslint:recommended',
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:react-hooks/recommended',
@@ -19,6 +22,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
+    project: ['./tsconfig.json']
   },
   plugins: [
     'react-refresh',
@@ -54,10 +58,9 @@ module.exports = {
       },
     ],
 
-    'max-len': ['error', 150],
+    'max-len': ['error', 120],
     'no-console': 'warn',
     'no-var': 'error',
-    'react/boolean-prop-naming': ['error', { rule: '^(can|is|has)[A-Z]([A-Za-z0-9]?)+' }],
     'react/jsx-sort-props': [
       'error',
       {
@@ -103,9 +106,6 @@ module.exports = {
     'no-extra-boolean-cast': 'error',
     'react/no-unused-state': 'error',
     'require-await': 'error',
-    'react/react-in-jsx-scope': 'off',
-    'arrow-body-style': 'off',
-    'prefer-arrow-callback': 'off',
     'react/function-component-definition': [
       2,
       {
@@ -145,6 +145,12 @@ module.exports = {
         ],
       },
     ],
+    // Delete from Packages above
+    "import/extensions": "off",
+    'react/react-in-jsx-scope': 'off',
+    'arrow-body-style': 'off',
+    'prefer-arrow-callback': 'off',
+    'react/require-default-props': 'off' // Only for JS PropType
   },
   overrides: [
     {
